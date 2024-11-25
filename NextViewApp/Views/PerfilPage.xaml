@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="NextViewApp.Views.PerfilPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Perfil">
+    <ContentPage.Content>
+        <StackLayout Padding="10" Spacing="20" HorizontalOptions="Center">
+            <Image Source="user_icon.png" WidthRequest="100" HeightRequest="100" />
+            <Label Text="{Binding Usuario.Nome}" FontSize="Large" />
+            <Label Text="{Binding Usuario.Email}" FontSize="Medium" />
+            <Button Text="Editar Perfil" Clicked="OnEditarPerfilClicked" />
+            <Button Text="Análise de Métricas" Clicked="OnAnaliseMetricasClicked" />
+            <Button Text="Sair" Clicked="OnSairClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

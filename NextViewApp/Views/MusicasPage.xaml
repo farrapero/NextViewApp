@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="NextViewApp.Views.MusicasPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Músicas">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <!-- Botão para Upload de Música -->
+            <Button Text="Upload de Música" Clicked="OnUploadMusicaClicked" />
+
+            <!-- Lista de Músicas -->
+            <CollectionView ItemsSource="{Binding ListaDeMusicas}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" Padding="5">
+                            <Image Source="{Binding CapaAlbum}" WidthRequest="50" HeightRequest="50" />
+                            <Label Text="{Binding Titulo}" VerticalOptions="Center" Margin="10,0,0,0" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

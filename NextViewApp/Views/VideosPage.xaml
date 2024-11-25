@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="NextViewApp.Views.VideosPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Vídeos">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <!-- Botão para Upload de Vídeo -->
+            <Button Text="Upload de Vídeo" Clicked="OnUploadVideoClicked" />
+
+            <!-- Lista de Vídeos -->
+            <CollectionView ItemsSource="{Binding ListaDeVideos}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Vertical" Padding="5">
+                            <Image Source="{Binding Thumbnail}" HeightRequest="200" />
+                            <Label Text="{Binding Titulo}" FontAttributes="Bold" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
